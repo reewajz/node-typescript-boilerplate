@@ -39,3 +39,36 @@ To start the application in development mode with hot-reloading:
 ```sh
 npm run dev
 ```
+
+To run the application in a Docker container for development:
+    docker-compose -f docker-compose.yml -f Dockerfile.dev up
+
+
+#### Production
+
+To start the application in development mode with hot-reloading:
+
+```sh
+npm run build
+npm start
+```
+
+To build and run the application in a Docker container for production:
+    docker build -f Dockerfile.prod -t etl-state-manager .
+    docker run -p 3000:3000 etl-state-manager
+
+
+#### Testing
+```sh
+npm test
+```
+
+
+#### Linting
+```sh
+npm run lint
+```
+To automatically fix linting issues:
+```sh
+npm run lint:fix
+```
