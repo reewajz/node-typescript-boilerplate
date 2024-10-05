@@ -42,9 +42,9 @@ npm run dev
 
 To run the application in a Docker container for development:
 ```sh
-    docker-compose -f docker-compose.yml -f Dockerfile.dev up
-    ```
-    
+docker-compose -f docker-compose.yml -f Dockerfile.dev up
+```
+
 
 #### Production
 
@@ -55,10 +55,10 @@ npm start
 ```
 
 To build and run the application in a Docker container for production:
-    ```sh 
-    docker build -f Dockerfile.prod -t etl-state-manager .
-    docker run -p 3000:3000 etl-state-manager
-    ```
+```sh 
+docker build -f Dockerfile.prod -t etl-state-manager .
+docker run -p 3000:3000 etl-state-manager
+```
 
 
 #### Testing
