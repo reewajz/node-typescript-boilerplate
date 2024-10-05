@@ -41,21 +41,24 @@ npm run dev
 ```
 
 To run the application in a Docker container for development:
+```sh
     docker-compose -f docker-compose.yml -f Dockerfile.dev up
-
+    ```
+    
 
 #### Production
 
-To start the application in development mode with hot-reloading:
-
+To build and start the application in production mode:
 ```sh
 npm run build
 npm start
 ```
 
 To build and run the application in a Docker container for production:
+    ```sh 
     docker build -f Dockerfile.prod -t etl-state-manager .
     docker run -p 3000:3000 etl-state-manager
+    ```
 
 
 #### Testing
